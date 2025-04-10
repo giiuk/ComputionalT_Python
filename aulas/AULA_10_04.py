@@ -48,7 +48,7 @@ while i < 5:
    i = i + 1
 print(f"Você digitou {pares} números pares e {i - pares} números ímpares")'''
 
-
+""
 senha = '1234'
 tentativas = 1
 acesso = input("Digite sua senha:\n->")
