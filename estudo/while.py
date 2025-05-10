@@ -132,3 +132,43 @@ while contador <= n:
     contador += 1
 print(" -> FIM ")'''
 
+
+#Exercicio  2
+
+#a
+nome = input("Digite seu nome: ")
+while len(nome) < 3:
+    print("Inválido")
+    nome = input("Digite seu nome: ")
+
+#b
+while True:
+    idade = input("Digite sua idade: ")
+    while not idade.isnumeric():
+        print("Inválido!!")
+        idade = input("Digite sua idade: ")
+    idade = int(idade)
+    if idade > 0 and idade < 150:
+        break
+    else:
+        print("Precisa ter até 150 anos")
+
+#c
+while True:
+    salario = input("Digite seu salário: ")
+    while not salario.isnumeric():
+        print("Inválido!!")
+        salario = input("Digite seu salário: ")
+    salario = int(salario)
+    if salario > 0:
+        break
+    else:
+        print("Digite um valor maior que 0")
+
+#d
+sexo = input("Digite seu sexo:\n[F] - Feminino\n[M] - Masculino\n->")
+while sexo != 'f' and sexo != 'm':
+    print("Inválido.")
+    sexo = input("Digite seu sexo:\n[F] - Feminino\n[M] - Masculino\n->")
+
+
