@@ -15,13 +15,12 @@ while True:
        if num > 0 and num < 10:
            break'''
 
+
+
 '''#Exercicio 2
 nome = input("Diga seu nome: ")
 while len(nome) < 3:
    nome = input("Diga seu nome: ")
-
-
-
 
 while True:
    idade = input("Diga sua idade: ")
@@ -63,6 +62,8 @@ while a < b:
    t += 1
 print(t)'''
 
+
+
 '''#Exercicio 4
 i = 0
 soma = 0
@@ -74,6 +75,8 @@ while i < 5:
    soma += nota
    i += 1
 media = soma/i'''
+
+
 
 '''#Exercicio 5
 a = input(f"Diga o primeiro numero:")
@@ -98,6 +101,8 @@ while a <= b:
    print(a, end=' ')
    a += 1'''
 
+
+
 '''#Exercicio 6
 senha = '1234'
 password = input("Diga sua senha: ")
@@ -111,6 +116,8 @@ if password == senha:
 else:
    print("Sai hacker")'''
 
+
+
 '''#Exercicio 7
 num = 1
 while num <=10:
@@ -122,6 +129,8 @@ while num <=10:
    print()
    num += 1
 '''
+
+
 
 '''#Exercicio 8
 a = 1
@@ -136,6 +145,8 @@ while i < 10:
    i += 1
 '''
 
+
+
 '''#Exercicio 9
 i = 0
 pares = 0
@@ -149,6 +160,8 @@ while i < 10:
    i += 1
 print(f"Você digitou {pares} pares e {i - pares} ímpares")'''
 
+
+
 '''#Exercicio 10
 i = 1
 fatorial = 1
@@ -156,8 +169,6 @@ while i < 5:
    i += 1
    fatorial *= i
 print(fatorial)
-
-
 
 
 i = 1
@@ -170,6 +181,8 @@ while i < num:
    fatorial *= i
 produto += f"{i} = {fatorial}"
 print(produto)'''
+
+
 
 '''#Exercicio 11
 num = 35
@@ -185,7 +198,10 @@ while True:
    i += 1
 '''
 
+
+
 # Exercicio 12 - ver exercício 4
+
 
 
 '''#Exercicio 13
@@ -199,28 +215,83 @@ while ano < 2005:
    ano +=1
 print(salario)'''
 
-# Exercicio 14 - Incompleto
-intervalo_1 = 0
-intervalo_2 = 0
-intervalo_3 = 0
-intervalo_4 = 0
+
+
+'''#Exercicio 14
+intervalo1 = 0
+intervalo2 = 0
+intervalo3 = 0
+intervalo4 = 0
 
 while True:
-    num = input("Diga um numero: ")
+    num = input("Digite um número: ")
     while not num.isnumeric():
-        print("Inválido!")
-        num = input("Diga um numero: ")
+        print("Inválido")
+        num = input("Digite um número: ")
     num = int(num)
-    if num < 25:
-        intervalo_1 += 1
-    elif num < 50:
-        intervalo_1 += 1
-    elif num < 75:
-        intervalo_1 += 1
-    elif num < 100:
-        intervalo_1 += 1
+    if num <= 25:
+        intervalo1 += 1
+    elif num <= 50:
+        intervalo2 += 1
+    elif num <= 75:
+        intervalo3 += 1
+    elif num <= 100:
+        intervalo4 += 1
     else:
-        print("Tem que ser entre 0 e 100!")
+        print("O número precisa ser de 0 até 100")
+    proxima = input("Você deseja continuar? S/N\n")
+    while not (proxima == 's' or proxima == 'n'):
+        proxima = input("Você deseja continuar? S/N\n")
+    if proxima == 'n':
+        break
+print(f"[0-25] - {intervalo1}\n[26-50] - {intervalo2}\n"
+      f"[51-75] - {intervalo3}\n[76-100] - {intervalo4}")'''
 
-    continuar = input("Você quer continuar? (s/n)")
 
+
+'''#Exercicio 15
+candidato1 = 'João'
+candidato2 = 'Roberto'
+candidato3 = 'Maria'
+candidato4 = 'José'
+brancos = 'brancos'
+nulos = 'nulos'
+
+total = 0
+voto1 = 0
+voto2 = 0
+voto3 = 0
+voto4 = 0
+votoB = 0
+votoN = 0
+
+while True:
+    opcao = input(f"Escolha:\n{candidato1}\n{candidato2}"
+                  f"\n{candidato3}\n{candidato4}"
+                  f"\n{brancos}\n{nulos}\n->")
+    if not (opcao == candidato1 or opcao == candidato2 or opcao == candidato3 or opcao == candidato4 or opcao == nulos or opcao == brancos):
+        print("Opção inválida.")
+        opcao = input(f"Escolha:\n{candidato1}\n{candidato2}"
+                  f"\n{candidato3}\n{candidato4}"
+                  f"\n{brancos}\n{nulos}\n->")
+    if opcao == candidato1:
+        voto1 += 1
+    elif opcao == candidato2:
+        voto2 += 1
+    elif opcao == candidato3:
+        voto3 += 1
+    elif opcao == brancos:
+        votoB += 1
+    else:
+        votoN += 1
+    total += 1
+    proxima = input("Deseja continuar? [S/N]")
+    while not (proxima == 's' or proxima == 'n'):
+        proxima = input("Deseja continuar? [S/N]")
+    if proxima == 'n':
+        break
+print(f"{candidato1} - {voto1}\n{candidato2} - {voto2}"
+      f"\n{candidato3} - `{voto3}\n{candidato4} - {voto3}\n"
+      f"{brancos} - {votoB}\n{nulos} - {votoN}")
+print(f"Porcentagem de votos nulos sobre o total: {votoN *100/total:.2f}")
+print(f"A porcentagem de brancos sobre o total: {votoB *100/total:.2f}")'''
